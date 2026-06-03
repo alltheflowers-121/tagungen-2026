@@ -5,10 +5,10 @@
 // für den Browser (kein Backend-Zugriff auf JSON-Dateien bei statischen Seiten).
 
 export const EVENT = {
-  name:      'Personaltage® 2026',
-  short:     'Personaltage® 2026',
-  date:      '7.–9. Oktober 2026',
-  location:  'PETER EDEL Berlin',
+  name:      'Tagungen kbw 2026',
+  short:     'Tagungen kbw 2026',
+  date:      'Juni 2026',
+  location:  'PAbacus Tierpark Hotel',
   organizer: 'KBW e.V.',
   refPrefix: 'PT-2026',
   cdnUrl:    'https://personaltage.kbw.de',   // Bunny Pull Zone dieses Events
