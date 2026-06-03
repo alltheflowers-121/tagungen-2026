@@ -5,8 +5,8 @@
 // für den Browser (kein Backend-Zugriff auf JSON-Dateien bei statischen Seiten).
 
 export const EVENT = {
-  name:      'Personaltage® 2026',
-  short:     'Personaltage® 2026',
+name: 'Tagungen KBW',
+short: 'Tagungen KBW',
   date:      '7.–9. Oktober 2026',
   location:  'PETER EDEL Berlin',
   organizer: 'KBW e.V.',
@@ -42,3 +42,4 @@ export const PROGRAMMPUNKTE = [
 
 export const MAHLZEITEN          = ['Fleisch', 'Vegetarisch', 'Vegan'];
 export const MAX_PROGRAMMPUNKTE  = 5;
+
