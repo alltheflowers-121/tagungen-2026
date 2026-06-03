@@ -11,7 +11,7 @@ export const EVENT = {
   location:  'PETER EDEL Berlin',
   organizer: 'KBW e.V.',
   refPrefix: 'PT-2026',
-  cdnUrl:    'https://personaltage.kbw.de',   // Bunny Pull Zone dieses Events
+  cdnUrl:    'https://personalvertretungsrecht.kbw.de',
 };
 
 export const PHASES = {
