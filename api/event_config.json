@@ -1,127 +1,151 @@
 {
-  "_comment": "feat/model-personaltage · KBW Personaltage® 2026 — Jeder Branch hat seine eigene event_config.json",
-
+  "_comment": "feat/model-sozialrecht-sgb-xii · KBW Sozialrecht SGB XII 2026",
   "event": {
-    "name":             "Personaltage® 2026",
-    "short_name":       "Personaltage® 2026",
-    "date":             "2026-10-07",
-    "date_label":       "7.–9. Oktober 2026",
-    "location":         "PETER EDEL Berlin",
-    "organizer":        "KBW e.V.",
-    "reference_prefix": "PT-2026",
+    "name": "Sozialrecht SGB XII 2026",
+    "short_name": "Sozialrecht SGB XII 2026",
+    "date": "2026-09-24",
+    "date_label": "24.–25. September 2026",
+    "location": "PETER EDEL Berlin",
+    "organizer": "KBW e.V.",
+    "reference_prefix": "S12-2026",
     "reference_padding": 3
   },
-
   "bunny": {
-    "_comment":      "Pro Branch eigene Pull Zone – deploy.js liest alles hieraus",
-    "storage_zone":  "kbw-personaltage",
-    "storage_region":"de",
-    "pull_zone_id":  "PULL_ZONE_ID_HIER",
-    "cdn_url":       "https://personaltage.kbw.de",
+    "_comment": "Eigene Pull Zone anlegen unter bunny.net → CDN",
+    "storage_zone": "kbw-sozialrecht-sgb-xii",
+    "storage_region": "de",
+    "pull_zone_id": "PULL_ZONE_ID_EINTRAGEN",
+    "cdn_url": "https://sozialrecht-sgb-xii.kbw.de",
     "deploy_prefix": ""
   },
-
   "smtp": {
-    "from_name":      "Personaltage® 2026",
-    "reply_to":       "service@personaltage.de",
-    "subject_prefix": "Personaltage® 2026"
+    "from_name": "KBW Sozialrecht SGB XII 2026",
+    "reply_to": "service@kbw.de",
+    "subject_prefix": "Sozialrecht SGB XII 2026"
   },
-
   "phases": {
     "pre_event": {
-      "label":       "Vorab-Auswahl",
-      "description": "Wähle dein Fachforum, Programmpunkte und Verpflegung – bis 6 Wochen vor der Tagung.",
-      "opens_at":    "2026-08-25",
-      "closes_at":   "2026-09-25",
-      "active":      true
+      "label": "Vorab-Auswahl",
+      "description": "Wähle deine Programmpunkte und Verpflegung für die Sozialrecht SGB XII 2026.",
+      "opens_at": "2026-07-30",
+      "closes_at": "2026-09-10",
+      "active": true
     },
     "event_day": {
-      "label":       "Check-in",
-      "description": "Bestätige deine Anwesenheit am Veranstaltungstag mit deiner Bezugsnummer.",
-      "opens_at":    "2026-10-07T07:30:00",
-      "closes_at":   "2026-10-09T18:00:00",
-      "active":      true
+      "label": "Check-in",
+      "description": "Bestätige deine Anwesenheit am Veranstaltungstag.",
+      "opens_at": "2026-09-24T07:30:00",
+      "closes_at": "2026-09-25T18:00:00",
+      "active": true
     }
   },
-
   "participant": {
-    "id_field":       "referenceNumber",
-    "id_label":       "Bezugsnummer",
-    "id_placeholder": "z. B. PT-2026-042",
-    "id_format":      "^PT-\\d{4}-\\d{3,4}$",
-    "id_format_hint": "Format: PT-JJJJ-NNN",
+    "id_field": "referenceNumber",
+    "id_label": "Bezugsnummer",
+    "id_placeholder": "z. B. S12-2026-001",
+    "id_format": "^S12-\\d{4}-\\d{3,4}$",
+    "id_format_hint": "Format: S12-JJJJ-NNN",
     "fields": [
-      { "key": "name",            "label": "Name",          "type": "text",  "required": true },
-      { "key": "email",           "label": "E-Mail",         "type": "email", "required": true },
-      { "key": "organization",    "label": "Organisation",   "type": "text",  "required": true },
-      { "key": "referenceNumber", "label": "Bezugsnummer",   "type": "text",  "required": true, "readonly": true }
+      {
+        "key": "name",
+        "label": "Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "email",
+        "label": "E-Mail",
+        "type": "email",
+        "required": true
+      },
+      {
+        "key": "organization",
+        "label": "Organisation",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "referenceNumber",
+        "label": "Bezugsnummer",
+        "type": "text",
+        "required": true,
+        "readonly": true
+      }
     ]
   },
-
   "selections": {
-    "fachforum": {
-      "label":       "Fachforum",
-      "description": "Bitte wähle genau ein Fachforum. Die Wahl ist verbindlich.",
-      "type":        "single",
-      "required":    true,
-      "min": 1, "max": 1,
-      "db_table":    "fachforen",
-      "options": [
-        { "id": "forum-1", "title": "Fachforum 1", "subtitle": "Digitale Bildung",         "room": "Saal A", "capacity": 120 },
-        { "id": "forum-2", "title": "Fachforum 2", "subtitle": "Führung und Organisation", "room": "Saal B", "capacity": 100 },
-        { "id": "forum-3", "title": "Fachforum 3", "subtitle": "Gesundheit und Arbeit",    "room": "Saal C", "capacity":  80 },
-        { "id": "forum-4", "title": "Fachforum 4", "subtitle": "KI und Verwaltung",        "room": "Saal D", "capacity":  90 }
-      ]
-    },
     "programmpunkte": {
-      "label":       "Rahmenprogramm",
-      "description": "Wähle bis zu 5 Programmpunkte aus.",
-      "type":        "multi",
-      "required":    false,
-      "min": 0, "max": 5,
-      "db_table":    "programmpunkte",
-      "options": [
-        { "id": "prog-1", "title": "Abendempfang",    "time": "18:00", "capacity": null },
-        { "id": "prog-2", "title": "Stadtführung",    "time": "14:00", "capacity":   40 },
-        { "id": "prog-3", "title": "Netzwerk-Dinner", "time": "19:30", "capacity":   80 },
-        { "id": "prog-4", "title": "Kulturprogramm",  "time": "16:00", "capacity":   60 },
-        { "id": "prog-5", "title": "Abschlussrunde",  "time": "17:00", "capacity": null }
-      ]
+      "label": "Programmpunkte",
+      "description": "Wähle die Programmpunkte aus, die dich interessieren.",
+      "type": "multi",
+      "required": false,
+      "min": 0,
+      "max": 10,
+      "db_table": "programmpunkte",
+      "options": []
     },
     "verpflegung": {
-      "label":       "Verpflegung",
+      "label": "Verpflegung",
       "description": "Deine Auswahl gilt für alle Mahlzeiten des Tagungstags.",
-      "type":        "single",
-      "required":    true,
-      "min": 1, "max": 1,
-      "db_table":    "food_options",
+      "type": "single",
+      "required": true,
+      "min": 1,
+      "max": 1,
+      "db_table": "food_options",
       "options": [
-        { "id": "meal-1", "title": "Fleisch",      "value": "fleisch"      },
-        { "id": "meal-2", "title": "Vegetarisch",  "value": "vegetarisch"  },
-        { "id": "meal-3", "title": "Vegan",        "value": "vegan"        }
+        {
+          "id": "meal-1",
+          "title": "Fleisch",
+          "value": "fleisch"
+        },
+        {
+          "id": "meal-2",
+          "title": "Vegetarisch",
+          "value": "vegetarisch"
+        },
+        {
+          "id": "meal-3",
+          "title": "Vegan",
+          "value": "vegan"
+        }
       ]
     },
     "lunchpacket": {
-      "label":       "Lunchpaket",
+      "label": "Lunchpaket",
       "description": "Lunchpaket für die Mittagspause (statt Buffet).",
-      "type":        "boolean",
-      "required":    false,
-      "db_column":   "lunch_package",
-      "default":     false
+      "type": "boolean",
+      "required": false,
+      "db_column": "lunch_package",
+      "default": false
     }
   },
-
   "checkin": {
-    "method":            "referenceNumber",
-    "allow_manual":      true,
-    "allow_qr":          true,
+    "method": "referenceNumber",
+    "allow_manual": true,
+    "allow_qr": true,
     "duplicate_message": "Diese Bezugsnummer wurde bereits eingecheckt.",
-    "success_message":   "Herzlich willkommen! Ihre Anwesenheit wurde bestätigt."
+    "success_message": "Herzlich willkommen! Ihre Anwesenheit wurde bestätigt."
   },
-
   "exports": {
-    "catering":    { "columns": ["referenceNumber","name","organization","verpflegung","lunch_package"], "label": "Catering-Liste"        },
-    "fachforum":   { "columns": ["referenceNumber","name","organization","fachforum_title","fachforum_room"], "label": "Fachforum-Zuteilung" },
-    "anwesenheit": { "columns": ["referenceNumber","name","organization","status","checked_in_at"],       "label": "Anwesenheitsliste"      }
+    "catering": {
+      "columns": [
+        "referenceNumber",
+        "name",
+        "organization",
+        "verpflegung",
+        "lunch_package"
+      ],
+      "label": "Catering-Liste"
+    },
+    "anwesenheit": {
+      "columns": [
+        "referenceNumber",
+        "name",
+        "organization",
+        "status",
+        "checked_in_at"
+      ],
+      "label": "Anwesenheitsliste"
+    }
   }
 }
