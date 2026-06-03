@@ -7,7 +7,7 @@
 export const EVENT = {
   name:      'Tagungen kbw 2026',
   short:     'Tagungen kbw 2026',
-  date:      'Juni 2026',
+  date:      '10. Juni 2026',
   location:  'PAbacus Tierpark Hotel',
   organizer: 'KBW e.V.',
   refPrefix: 'PT-2026',
