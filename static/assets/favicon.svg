@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="4" fill="#ffffff"/>
+  <!-- k -->
+  <text x="2" y="26"
+    font-family="'Source Sans 3','Source Sans Pro',Georgia,serif"
+    font-size="28" font-weight="300" fill="#8c084d">k</text>
+  <!-- Akzent-Punkt -->
+  <circle cx="27" cy="16" r="4" fill="#eb5e50"/>
+</svg>

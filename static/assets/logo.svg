@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+
+  <!-- k -->
+  <text x="0" y="56"
+    font-family="'Source Sans 3','Source Sans Pro',Georgia,serif"
+    font-size="62" font-weight="300" fill="#8c084d">k</text>
+
+  <!-- b -->
+  <text x="38" y="56"
+    font-family="'Source Sans 3','Source Sans Pro',Georgia,serif"
+    font-size="62" font-weight="300" fill="#8c084d">b</text>
+
+  <!-- w -->
+  <text x="76" y="56"
+    font-family="'Source Sans 3','Source Sans Pro',Georgia,serif"
+    font-size="62" font-weight="300" fill="#8c084d">w</text>
+
+  <!-- Punkt (.) weinrot -->
+  <text x="124" y="56"
+    font-family="'Source Sans 3','Source Sans Pro',Georgia,serif"
+    font-size="62" font-weight="300" fill="#8c084d">.</text>
+
+  <!-- Akzent-Kreis in Koralle -->
+  <circle cx="146" cy="40" r="9" fill="#eb5e50"/>
+
+  <!-- Subline -->
+  <text x="0" y="76"
+    font-family="'Source Sans 3','Source Sans Pro',Georgia,serif"
+    font-size="16" font-weight="300" fill="#8c084d"
+    letter-spacing="0.02em">Kommunales Bildungswerk e.V.</text>
+</svg>
